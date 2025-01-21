@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+:root {
+  --quiz-background-color: #603F26; 
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+.bground {
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+}
+
+body{
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat; 
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#user-name-display{
+  font-family: "Lucida Handwriting", cursive; 
+}
+.button-hover {
+  color: white;
+  font-weight: bold;  
+  transform: scale(1.1);
+  transition: font-weight 0.3s ease, transform 0.3s ease;
+}
+
+.coffee-title {
+    font-size: 3rem;
+    color: var(--quiz-background-color); 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+    padding: 10px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #a67c52, #d7b899); 
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.coffee-title::before {
+    content: "☕";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    font-size: 2rem;
+    color: #5c3b28;
+}
+
+.coffee-title::after {
+    content: "☕";
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    font-size: 2rem;
+    color: #5c3b28;
+}
+
+
+nav{
+  background: url("coperta.jpg");
+  z-index: 1;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  font-family:Brush Script MT, Brush Script Std, cursive;
+  font-style: italic;
+  font-size: 6.3vw;
+  text-shadow: 2px 2px #FFDBB5;
+  margin-left:1%;
+  margin-right: 0;
+  padding-right: 0;
+  color: var(--quiz-background-color); 
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  background: var(--quiz-background-color);
+  margin: 0 5px;
+}
+nav ul li a{
+  color: #FFDBB5;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: #ECB176;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #FFDBB5;
+  text-decoration: underline;
+}
+nav ul ul{
+  position: absolute;
+  top: 10%;
+  border-top: 3px solid #ECB176;
+  opacity: 0;
+  transition: top .3s;
+  visibility: hidden;
+}
+nav ul li:hover > ul{
+  top: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid #AB886D;
+}
+
+.show,.icon,input[type="checkbox"]{
+  display: none;
+}
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+@media all and (max-width: 750px) {
+  nav ul{
+    margin-right: 0px;
+    float: left;
+  }
+  nav .logo{
+    padding-left: 30px;
+    width: 100%;
+  }
+  .show + a, ul{
+    display: none;
+  }
+  nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+  }
+  nav ul li a:hover{
+    box-shadow: none;
+  }
+  .show{
+    display: block;
+    color: #FFDBB5;
+    font-size: 18px;
+    padding: 0 20px;
+    line-height: 70px;
+    cursor: pointer;
+  }
+  .show:hover{
+    color: #ECB176;
+  }
+  .icon{
+    display: block;
+    color: var(--quiz-background-color);
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 70px;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+  }
+  nav ul ul a{
+    padding-left: 40px;
+  }
+  nav ul ul ul a{
+    padding-left: 80px;
+  }
+  nav ul ul ul li{
+    position: static;
+  }
+  [id^=btn]:checked + ul{
+    display: block;
+  }
+  nav ul ul li{
+    border-bottom: 0px;
+  }
+  .column{
+    flex: 100%;
+  }
+  span.cancel:before{
+    content: '\f00d';
+  }
+}
+header{
+  font-size: 35px;
+  font-weight: 600;
+  padding: 10px 0;
+}
+p{
+  text-align: justify;
+  font-size: 30px;
+  font-weight: 500;
+}
+#footnote{
+  text-align:center;
+  font-size: 90%;
+}
+div{
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+h2{
+  font-size: 200%;
+  font-family: "Lucida Handwriting", cursive;
+}
+h3{
+  font-size:175%;
+}
+
+ul{
+  font-size: 20px;
+}
+
+
+
+.container {
+  max-width: 60%;
+  margin: 20px auto;
+  margin-top: 5%;
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.question {
+  margin: 20px 0;
+}
+.hidden {
+  display: none;
+}
+.question h3 {
+  margin-bottom: 10px;
+}
+.answers {
+  display: flex;
+  flex-direction: column; 
+  list-style-type: none;
+  padding: 0;
+}
+
+.answers li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s ease;
+}
+.answer-image {
+  max-width: 50%;  
+  max-height: 50%; 
+  width: auto;    
+  height: auto;    
+  margin-right: 10px; 
+  object-fit: contain; 
+}
+
+.answers li:hover {
+  background-color: #f0e6d2;
+}
+
+.answers li.selected {
+  background-color: #d2b48c;
+  border-color: #6f4e37;
+}
+
+button {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #5a3c2a;
+}
+
+.result {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer{
+  background-color: var(--quiz-background-color);
+  margin-top: 10%;
+  margin-bottom: -20px;
+}
+
+.social{
+  text-align: center;
+  padding: 2vw 2vw 2vw 2vw;
+}
+
+.social a {
+  font-size: 5vw;
+  display: inline;
+  color: #AB886D;
+  width: 25px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.social a:hover{
+  background-color: #FED8B1;
+}
+
+.footer p{
+  text-align: center;
+  padding-bottom: 30px;
+  color: #FED8B1;
+}
+
+.copy-right{
+  text-align: center;
+  padding-bottom: 30px;
+  color: #FED8B1;
+  font-size: 75%;
+}
+

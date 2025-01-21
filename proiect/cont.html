@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <title>It's coffee o'clock</title>
+    <head>
+        <meta charset="utf-8">
+        <meta name="autor" content="Dorneanu Diana">
+        <meta name="description" content="cafea">
+        <meta name="keywords" content="cafea sanatate espresso latte cappuccino ">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <!-- <base href="resources/"> -->
+        <link rel="stylesheet" href="resources/style3.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="icon" href="resources/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script type="text/javascript" src="resources/cont.js"></script>
+    </head>
+<body>
+    <header>
+        <nav>
+           <div class="logo">
+              Pauza de cafeluta...
+           </div>
+           <label for="btn" class="icon">
+           <span class="fa fa-bars"></span>
+           </label>
+           <input type="checkbox" id="btn">
+           <ul>
+              <li><a href="index.html">Istoria cafelei</a></li>
+              <li>
+                 <label for="btn-1" class="show">Tipuri de băuturi +</label>
+                 <a href="bauturi.html">Tipuri de băuturi</a>
+                 <input type="checkbox" id="btn-1">
+                 <ul>
+                    <li><a href="bauturi.html#2_1">Espresso</a></li>
+                    <li><a href="bauturi.html#2_2">Americano</a></li>
+                    <li><a href="bauturi.html#2_3">Cappuccino</a></li>
+                    <li><a href="bauturi.html#2_4">Latte</a></li>
+                    <li><a href="bauturi.html#2_5">Flat White</a></li>
+                    <li><a href="bauturi.html#2_6">Mocha</a></li>
+                    <li><a href="bauturi.html#2_7">Frappe</a></li>
+                 </ul>
+              </li>
+              <li>
+                <label for="btn-2" class="show">Cafeaua în lume +</label>
+                <a href="lume.html">Cafeaua în lume</a>
+                <input type="checkbox" id="btn-2">
+                <ul>
+                   <li><a href="lume.html#3_1">Europa</a></li>
+                   <li><a href="lume.html#3_2">Asia</a></li>
+                   <li><a href="lume.html#3_3">Africa</a></li>
+                   <li><a href="lume.html#3_4">America</a></li>
+                   <li><a href="lume.html#3_5">Australia</a></li>
+                </ul>
+             </li>
+              <li><a href="cafenele.html">Top 5 cafenele</a></li>
+              <li><a href="cont.html">Contul meu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="login-section">
+            <h3>Login</h3>
+            <input type="text" id="login-username" placeholder="Username" />
+            <input type="password" id="login-password" placeholder="Parola" />
+            <button onclick="login()">Login</button>
+            <p id="footnote">Nu ai cont? <a href="javascript:void(0);" onclick="showCreateAccount()">Creează un cont</a></p>
+        </div>
+        
+        <div id="create-account-section" class="hidden">
+            <h3>Creează un cont</h3>
+            <input type="text" id="new-username" placeholder="Username (5 litere, 3 cifre)" />
+            <input type="password" id="new-password" placeholder="Parola(6 caractere)" />
+            <button onclick="createAccount()">Crează cont</button>
+            <p>Ai deja un cont? <a href="javascript:void(0);" onclick="showLogin()">Login</a></p>
+        </div>
+
+        <div id="logout-section" class="hidden">
+            <h3>Salut, <span id="user-name-display"></span>!</h3>
+            <div id="personalized-paragraph">
+                <p id="color-message"></p>
+            </div>
+            <button onclick="logout()">Logout</button>
+
+            <div id="navigation-buttons">
+                <button onclick="navigateToPage('quiz.html')" id="button1">Afla ce cafea ti se potriveste!</button>
+                <button onclick="navigateToPage('citire.html')"id="button2">Vino să îți citesc în cafea!</button>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        $('.icon').click(function(){
+          $('span').toggleClass("cancel");
+        });
+    </script>
+    <section class="footer">
+        <div class="social">
+            <a href="https://github.com/dianadd03"><i class="fa fa-github"></i></a>
+            <a href="mailto:diana-delia.dorneanu@s.unibuc.ro"><i class="fa fa-envelope"></i></a>
+        </div>
+        <p>made by a latte drinker, or as the Dutch would say "wrong coffee"</p>
+        <p>@Dorneanu Diana-Delia</p>
+        <p class="copy-right">Copyright @2024 all right reserved by diana_dd03</p>
+    </section>
+</body>
+</html>
